@@ -1,3 +1,4 @@
+using CentralizeBlockChain.API.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
@@ -13,7 +14,7 @@ namespace CentralizeBlockChain.API
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            CreateHostBuilder(args).Build().SeedDb().Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
